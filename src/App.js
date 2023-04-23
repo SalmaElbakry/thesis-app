@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
@@ -12,72 +12,71 @@ import {
 import Navbar from "./components/navbar/Navbar";
 import LeftBar from "./components/leftBar/LeftBar";
 import RightBar from "./components/rightBar/RightBar";
-
-
+import "./style.scss";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
-
   const currentUser = true;
+  const { darkMode } = useContext(DarkModeContext);
 
   const Layout = () => {
-    return(
-      <div>
-        <Navbar/>
-        <div style={{display: "flex"}}>
-        <LeftBar/>
-        <div style={{flex:6}}>
-          <Outlet/>
-        </div>
-        <RightBar/>
+    return (
+      <div className={`theme-${darkMode ? "light" : "dark"}`}>
+        <Navbar />
+        <div style={{ display: "flex" }}>
+          <LeftBar />
+          <div style={{ flex: 6 }}>
+            <Outlet />
+          </div>
+          <RightBar />
         </div>
       </div>
-    )
-  }
-  
-  const ProtectedRoute = ({children}) =>{
-    if (!currentUser){
-      return <Navigate to= "/login"/>
+    );
+  };
+
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login" />;
     }
-    return children
-  } 
+    return children;
+  };
 
   const router = createBrowserRouter([
     {
       path: "",
       element: (
         <ProtectedRoute>
-          <Layout/>
+          <Layout />
         </ProtectedRoute>
       ),
       children: [
         {
           path: "/",
-          element: <Home/>,
+          element: <Home />,
         },
         {
           path: "/profile/:id",
-          element: <Profile/>,
+          element: <Profile />,
         },
         {
           path: "/",
-          element: <Home/>,
+          element: <Home />,
         },
-      ]
+      ],
     },
     {
       path: "/login",
-      element: <Login/>,
+      element: <Login />,
     },
     {
       path: "/register",
-      element: <Register/>,
-    }
+      element: <Register />,
+    },
   ]);
 
   return (
     <div>
-    <RouterProvider router={router} />
-    
+      <RouterProvider router={router} />
     </div>
   );
 }
