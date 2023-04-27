@@ -2,6 +2,7 @@ import "./share.scss";
 import Image from "../../assets/img.png";
 import Map from "../../assets/map.png";
 import Friend from "../../assets/friend.png";
+import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 import { AuthContext } from "../../context/authContext";
 import { useContext, useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
@@ -64,9 +65,14 @@ const Share = () => {
               <img src={Map} alt="" />
               <span>Add Place</span>
             </div>
-            <div className="item">
+            {/* <div className="item">
               <img src={Friend} alt="" />
               <span>Tag Friends</span>
+            </div> */}
+            <div className="item">
+              {/* <img src={} alt="" /> */}
+              <CategoryOutlinedIcon />
+              <span>ِAdd Category</span>
             </div>
           </div>
           <div className="right">

@@ -5,8 +5,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import PlaceIcon from "@mui/icons-material/Place";
-import LanguageIcon from "@mui/icons-material/Language";
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import CoPresentOutlinedIcon from "@mui/icons-material/CoPresentOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Posts from "../../components/posts/Posts";
@@ -21,7 +21,7 @@ const Profile = () => {
           className="cover"
         />
         <img
-          src="https://images.pexels.com/photos/14028501/pexels-photo-14028501.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          src="https://images.pexels.com/photos/16327791/pexels-photo-16327791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
           className="profilePic"
         />
@@ -29,7 +29,7 @@ const Profile = () => {
       <div className="profileContainer">
         <div className="uInfo">
           <div className="left">
-            <a href="http://facebook.com">
+            {/*   <a href="http://facebook.com">
               <FacebookTwoToneIcon fontSize="large" />
             </a>
             <a href="http://instagram.com">
@@ -43,18 +43,18 @@ const Profile = () => {
             </a>
             <a href="http://pinterest.com">
               <PinterestIcon fontSize="large" />
-            </a>
+            </a> */}
           </div>
           <div className="center">
             <span>Jane Doe </span>
             <div className="info">
               <div className="item">
-                <PlaceIcon />
-                <span>USA</span>
+                <AutoAwesomeOutlinedIcon />
+                <span>Clay, Crochet</span>
               </div>
               <div className="item">
-                <LanguageIcon />
-                <span>www.website.com</span>
+                <CoPresentOutlinedIcon />
+                <span>Beginner</span>
               </div>
             </div>
             <button>Follow</button>
