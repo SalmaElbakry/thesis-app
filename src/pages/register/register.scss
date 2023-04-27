@@ -6,7 +6,7 @@
   justify-content: center;
 
   .card {
-    background-color: white;
+    background-color: #fdebed;
     display: flex;
     flex-direction: row-reverse;
     width: 50%;
@@ -15,7 +15,7 @@
     overflow: hidden;
     .left {
       flex: 1;
-      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+      background: linear-gradient(rgba(45, 3, 59, 0.5), rgba(45, 3, 59, 0.5)),
         url("https://images.pexels.com/photos/4877873/pexels-photo-4877873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
           center;
       background-size: cover;
@@ -39,8 +39,8 @@
       button {
         width: 50%;
         padding: 10px;
-        background-color: white;
-        color: rebeccapurple;
+        background-color: #fdebed;
+        color: #2d033b;
         font-weight: bold;
         cursor: pointer;
       }
@@ -61,6 +61,7 @@
         flex-direction: column;
         gap: 30px;
         input {
+          background-color: transparent;
           border: none;
           border-bottom: 1px solid lightgray;
           padding: 20px 10px;
@@ -69,7 +70,7 @@
           width: 50%;
           padding: 10px;
           border: none;
-          background-color: #938eef;
+          background-color: #2d033b;
           color: white;
           font-weight: bold;
           cursor: pointer;
